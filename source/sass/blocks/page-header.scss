@@ -1,0 +1,41 @@
+.page-header {
+  background-color: $background-color-extra;
+  padding-top: 33px;
+
+  @include tablet {
+    padding: 20px 25px 0 25px;
+  }
+
+  @include mobile {
+    padding: 17px 15px 0 17px;
+  }
+}
+
+.page-header__wrapper {
+  margin: 0 auto;
+  width: Max(920px, 73.5%);
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  align-items: center;
+  column-gap: 50px;
+
+  @include tablet {
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    width: auto;
+  }
+}
+
+.page-header__contacts {
+  justify-self: right;
+}
+
+.page-header__call-button {
+  padding: 13.5px;
+  width: 180px;
+  text-align: center;
+
+  @include tablet {
+    display: none;
+  }
+}

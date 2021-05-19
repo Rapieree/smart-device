@@ -1,1 +1,31 @@
-// fonts includes
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/roboto-medium.woff2") format("woff2"), url("../fonts/roboto-medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: url("../fonts/roboto-condensed-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "PT Mono";
+  font-display: swap;
+  src: url("../fonts/pt-mono-regular.woff2") format("woff2"), url("../fonts/pt-mono-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}

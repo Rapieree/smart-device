@@ -1,0 +1,35 @@
+.page-body {
+  margin: 0 auto;
+  padding: 0;
+  min-height: 100%;
+  min-width: $min-mobile-width;
+  max-width: $max-desktop-width;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  overflow-x: hidden;
+}
+
+.page-body--scroll-hidden {
+  @include tablet {
+    overflow: hidden;
+  }
+}
+
+.page-body--visibility-hidden {
+  @include tablet {
+    visibility: hidden;
+  }
+}
+
+.page-body__border-button {
+  @include font($font-roboto-c, 700);
+
+  font-size: 14px;
+  line-height: 16px;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $text-color-main;
+}

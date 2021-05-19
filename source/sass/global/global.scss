@@ -1,1 +1,51 @@
-// global variables
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+@mixin font($font, $weight) {
+  @if $font == $font-mono {
+    font-family: $font, "Courier", monospace;
+  }
+  @else if $font == $font-roboto or $font == $font-roboto-c {
+    font-family: $font, "Arial", sans-serif;
+  }
+
+  font-style: normal;
+  font-weight: $weight;
+}
+
+@mixin tablet {
+  @media (max-width: $max-tablet-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $max-mobile-width) {
+    @content;
+  }
+}

@@ -1,0 +1,60 @@
+.contacts {
+  margin: -10px -44px;
+  display: flex;
+  flex-wrap: wrap;
+  height: max-content;
+
+  @include tablet {
+    margin: -10px -16.65px;
+  }
+
+  @include mobile {
+    margin: -10px -11.5px;
+  }
+}
+
+.contacts a {
+  margin: 10px 44px;
+  @include font($font-mono, 400);
+  display: grid;
+  grid-template-columns: max-content fit-content;
+  align-items: center;
+  column-gap: 16px;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  color: $text-color-main;
+
+  @include tablet {
+    margin: 10px 16.65px;
+    column-gap: 0;
+  }
+
+  @include mobile {
+    margin: 10px 11.5px;
+  }
+}
+
+.contacts span {
+  @include tablet {
+    display: none;
+  }
+}
+
+.contacts__email span {
+  margin-left: 4px;
+}
+
+.contacts__phone svg {
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.contacts__email svg {
+  @include tablet {
+    width: 25px;
+    height: 19px;
+  }
+}

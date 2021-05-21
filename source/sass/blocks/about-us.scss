@@ -1,0 +1,30 @@
+.about-us {
+  margin: 0 auto;
+  max-width: 1170px;
+
+
+  &::after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+
+.about-us__year {
+  float: left;
+}
+
+.about-us__year > p {
+  writing-mode: vertical-rl;
+  @include font($font-roboto-c, 700);
+  margin: 0;
+  padding: 0;
+  font-size: 156.248px;
+  line-height: 220px;
+  transform: rotate(-180deg);
+  display: inline-block;
+  background-color: $accent-color;
+  background-image: url("../img/about-us/text-background.jpg");
+  background-clip: text;
+  color: transparent;
+}

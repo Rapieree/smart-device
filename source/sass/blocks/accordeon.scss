@@ -1,0 +1,49 @@
+.accordeon {
+  min-height: 145px;
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  column-gap: 6%;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5.0%;
+  }
+
+  @include mobile {
+    display: block;
+  }
+}
+
+
+.accordion__content {
+  margin: 0 auto;
+}
+
+.accordeon__item {
+
+}
+
+.accordion__header {
+
+}
+
+.accordion__toggle {
+
+}
+
+.accordion__title {
+  @include font($font-roboto-c, 400);
+
+  margin: 0 0 25px 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 16px;
+  color: $text-color-dark;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.accordion__content p {
+
+}
+

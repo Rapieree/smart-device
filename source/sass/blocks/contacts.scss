@@ -17,7 +17,7 @@
   margin: 10px 44px;
   @include font($font-mono, 400);
   display: grid;
-  grid-template-columns: max-content fit-content;
+  grid-template-columns: max-content 1fr;
   align-items: center;
   column-gap: 16px;
   font-size: 16px;

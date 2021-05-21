@@ -1,28 +1,40 @@
 .page-header {
+  padding: 33px 30px 73px 30px;
   background-color: $background-color-extra;
-  padding-top: 33px;
+  background-image: url("../img/promo/promo-background-desktop.jpg");
+  background-position: center center;
+  position: relative;
+  overflow-x: hidden;
 
   @include tablet {
-    padding: 20px 25px 0 25px;
+    padding: 20px 25px 163px 25px;
   }
 
   @include mobile {
-    padding: 17px 15px 0 17px;
+    padding: 17px 15px 70px 17px;
   }
 }
 
 .page-header__wrapper {
   margin: 0 auto;
-  width: Max(920px, 73.5%);
+  max-width: 1412px;
+  //width: Max(920px, 73.5%);
   display: grid;
-  grid-template-columns: max-content 1fr max-content;
+  grid-template-columns: 210px 1fr max-content;
   align-items: center;
   column-gap: 50px;
+  row-gap: 231px;
 
   @include tablet {
+    row-gap: 116px;
     grid-template-columns: max-content max-content;
     justify-content: space-between;
     width: auto;
+  }
+
+  @include mobile {
+    grid-template-columns: 38px max-content;
+    row-gap: 231px;
   }
 }
 
@@ -38,4 +50,8 @@
   @include tablet {
     display: none;
   }
+}
+
+.page-header__promo {
+  grid-column: 1 / -1;
 }

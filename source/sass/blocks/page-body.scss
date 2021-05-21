@@ -21,6 +21,10 @@
   }
 }
 
+.page-body main {
+  overflow: hidden;
+}
+
 .page-body__border-button {
   @include font($font-roboto-c, 700);
 

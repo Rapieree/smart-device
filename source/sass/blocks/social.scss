@@ -11,3 +11,20 @@
   margin: 8px;
 }
 
+.social a {
+  color: $social-color;
+  display: block;
+}
+
+.social a:hover,
+.social a:focus {
+  color: $social-color-hover;
+}
+
+.social a:active {
+  color: $social-color-active;
+}
+
+.social a:focus {
+  outline: 2px solid $focus-color-dark;
+}

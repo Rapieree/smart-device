@@ -3,6 +3,8 @@
   display: flex;
   flex-wrap: wrap;
   height: max-content;
+  position: relative;
+  z-index: 2;
 
   @include tablet {
     margin: -10px -16.65px;
@@ -24,6 +26,7 @@
   line-height: 18px;
   text-decoration: none;
   color: $text-color-main;
+  z-index: 1;
 
   @include tablet {
     margin: 10px 16.65px;
@@ -33,6 +36,24 @@
   @include mobile {
     margin: 10px 11.5px;
   }
+}
+
+.contacts svg {
+  z-index: 0;
+}
+
+.contacts a:hover,
+.contacts a:focus {
+  opacity: 0.7;
+}
+
+.contacts a:active {
+  opacity: 0.5;
+}
+
+.contacts a:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px $background-color-main;
 }
 
 .contacts span {

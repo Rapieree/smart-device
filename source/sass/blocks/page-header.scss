@@ -52,6 +52,20 @@
   }
 }
 
+.page-header__call-button:hover,
+.page-header__call-button:focus {
+  background-color: $accent-color;
+}
+
+.page-header__call-button:active {
+  background-color: $accent-color-darken;
+}
+
+.page-header__call-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px $background-color-main inset;
+}
+
 .page-header__promo {
   grid-column: 1 / -1;
 }

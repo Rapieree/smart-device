@@ -1,0 +1,183 @@
+.write-us {
+  background-color: $accent-color;
+  padding: 0 30px;
+  position: relative;
+
+  @include tablet {
+    padding: 0 88px;
+  }
+
+  @include mobile {
+    padding: 0 15px;
+  }
+
+  &::before {
+    content: "";
+    width: 265px;
+    height: 255px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 265 255' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.2' d='M1.90842 153.136L176.25 52.48L176.25 253.793L1.90842 153.136Z' stroke='white'/%3E%3C/svg%3E%0A");
+    position: absolute;
+    top: 45px;
+    right: 17px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 343px;
+    height: 405px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 343 405' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.2' d='M419.264 162.5L141.014 323.148L141.014 1.85223L419.264 162.5Z' stroke='white'/%3E%3C/svg%3E%0A");
+    position: absolute;
+    top: 290px;
+    right: 0;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.write-us__wrapper {
+  margin: 0 auto;
+  padding-top: 93px;
+  padding-bottom: 113px;
+  max-width: $max-content-desktop-width;
+  position: relative;
+  z-index: 1;
+
+  @include tablet {
+    padding: 81px 0 103px 0;
+    width: 590px;
+  }
+
+  @include mobile {
+    padding: 30px 0 43px 0;
+    width: 100%;
+    max-width: 500px;
+  }
+
+    &::before {
+      content: "";
+      padding-top: 95.52%;
+      background-image: url("../img/background-triangles.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      top: -60px;
+      left: -200px;
+      right: 700px;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+  &::after {
+    content: "";
+    padding-top: 56.36%;
+    background-image: url("../img/write-us/airplane-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: -2.13%;
+    right: Max(58.46%, 600px);
+    top: 161px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/write-us/airplane-desktop@2x.png");
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.write-us__form {
+  margin-left: auto;
+  width: 570px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 40px;
+
+  @include tablet {
+    width: 590px;
+    column-gap: 32px;
+    row-gap: 41px;
+  }
+
+  @include mobile {
+    grid-template-columns: auto;
+    row-gap: 30px;
+    width: 100%;
+  }
+}
+
+.write-us__wrapper h2 {
+  @include font($font-roboto-c, 400);
+
+  margin: 0 0 10px auto;
+  padding: 0;
+  width: 570px;
+  font-size: 36px;
+  line-height: 51px;
+  color: $text-color-main;
+
+  @include tablet {
+    width: auto;
+    margin: 0 0 15px 0;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @include mobile {
+    margin-bottom: 13px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.write-us__wrapper p {
+  @include font($font-mono, 400);
+
+  margin: 0 0 49px auto;
+  padding: 0;
+  width: 570px;
+  font-size: 16px;
+  line-height: 22px;
+  color: $text-color-main;
+
+  @include tablet {
+    width: auto;
+    margin: 0 0 55px 0;
+  }
+
+  @include mobile {
+    margin-bottom: 25px;
+  }
+}
+
+.write-us__text-wrapper {
+  grid-column: 1 / -1;
+}
+
+.write-us__submit-wrapper {
+  @include mobile {
+    margin-top: -2px;
+  }
+}
+
+.write-us__checked-wrapper {
+  margin-left: 8px;
+  align-self: center;
+  width: 230px;
+
+  @include mobile {
+    margin-left: 0;
+  }
+}

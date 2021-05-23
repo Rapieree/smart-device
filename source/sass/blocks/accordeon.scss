@@ -14,24 +14,42 @@
   }
 }
 
+.accordeon__header {
+  position: relative;
 
-.accordion__content {
+  @include mobile {
+    padding: 29px 0 28px 0;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 16px;
+      height: 1px;
+      background-color: $background-color-header;
+      position: absolute;
+      right: 0;
+      top: 50%;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.accordeon__content {
   margin: 0 auto;
+
+  @include mobile {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding-right: 16px;
+    display: none;
+  }
 }
 
-.accordeon__item {
-
-}
-
-.accordion__header {
-
-}
-
-.accordion__toggle {
-
-}
-
-.accordion__title {
+.accordeon__title {
   @include font($font-roboto-c, 400);
 
   margin: 0 0 25px 0;
@@ -41,9 +59,32 @@
   color: $text-color-dark;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+
+  @include mobile {
+    margin-bottom: 0;
+  }
 }
 
-.accordion__content p {
+.accordeon__item--nojs {
 
 }
 
+.accordeon__item--selected .accordeon__content {
+  @include mobile {
+    display: block;
+  }
+}
+
+.accordeon__item--selected .accordeon__header {
+  @include mobile {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.accordeon__content--selected {
+  @include mobile {
+    display: block;
+  }
+}

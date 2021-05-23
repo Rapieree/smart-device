@@ -1,17 +1,142 @@
 .about-us {
-  margin: 0 auto;
-  max-width: 1170px;
+  margin-bottom: 100px;
+  padding: 0 30px;
+  z-index: 1;
 
+  @include tablet {
+    margin-bottom: 74px;
+    padding: 0 25px;
+  }
 
-  &::after {
-    display: table;
-    content: "";
-    clear: both;
+  @include mobile {
+    margin-bottom: 64px;
+    padding: 0 14px 0 14px;
   }
 }
 
+.about-us__wrapper {
+  padding-left: 180px;
+  max-width: $max-content-desktop-width;
+  margin: 0 auto;
+  position: relative;
+  min-height: 317px;
+
+  @include tablet {
+    min-height: 361px;
+    padding-left: 185px;
+  }
+
+  @include mobile {
+    padding-left: 0;
+  }
+}
+
+.about-us h2 {
+  @include font($font-roboto-c, 400);
+
+  margin: -5px 0 18px 0;
+  padding: 0;
+  font-size: 36px;
+  line-height: 51px;
+  color: $text-color-grey;
+
+  @include tablet {
+    margin-top: -4px;
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
+    margin-left: 0;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.about-us__wrapper > p {
+  @include font($font-mono, 400);
+
+  margin: 0 0 20px 0;
+  padding: 0 3px 0 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: $text-color-grey;
+  width: 100%;
+
+  @include tablet {
+    padding: 0 0 0 3px;
+  }
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
+}
+
+.about-us__wrapper > p:last-of-type {
+  position: relative;
+
+  @include tablet {
+    &::after {
+      content: "..";
+    }
+  }
+}
+
+.about-us__wrapper span {
+  @include tablet {
+    display: none;
+  }
+}
+
+.about-us a {
+  margin-top: 21px;
+  display: inline-block;
+  padding: 13.5px;
+  width: 180px;
+  color: $accent-color;
+  border-color: $accent-color;
+  letter-spacing: 0.05em;
+  text-align: center;
+
+  @include tablet {
+    margin-left: 3px;
+  }
+
+  @include mobile {
+    margin-top: -10px;
+  }
+}
+
+.about-us a:hover,
+.about-us a:focus {
+  background-color: $accent-color;
+  color: $text-color-main;
+}
+
+.about-us a:active {
+  background-color: $accent-color-darken;
+}
+
+.about-us a:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px $focus-color-dark;
+}
+
 .about-us__year {
-  float: left;
+  position: absolute;
+  top: 5px;
+  left: -31px;
+
+  @include tablet {
+    top: 0;
+    left: -37px;
+  }
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .about-us__year > p {
@@ -20,11 +145,21 @@
   margin: 0;
   padding: 0;
   font-size: 156.248px;
-  line-height: 220px;
   transform: rotate(-180deg);
   display: inline-block;
   background-color: $accent-color;
   background-image: url("../img/about-us/text-background.jpg");
   background-clip: text;
+  background-size: contain;
+  background-position: 35px -5px;
+  background-repeat: repeat;
   color: transparent;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/about-us/text-background@2x.jpg");
+  }
+
+  @include tablet {
+    font-size: 178.324px;
+  }
 }

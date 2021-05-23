@@ -3,7 +3,7 @@
   background-color: $background-color-footer;
 
   @include tablet {
-    padding: 19px 25px 0 25px;
+    padding: 21px 25px 0 25px;
   }
 
   @include mobile {
@@ -49,7 +49,14 @@
 
 .page-footer__logo p {
   @include mobile {
-   display: block;
+    display: block;
+  }
+}
+
+.page-footer__logo img {
+  @include mobile {
+    width: 52px;
+    height: 52px;
   }
 }
 
@@ -83,7 +90,7 @@
   width: 29.8%;
 
   @include tablet {
-    padding-bottom: 26px;
+    padding-bottom: 24px;
     width: 100%;
     display: grid;
     grid-template-columns: 42% 32.63% 1fr;
@@ -91,6 +98,7 @@
   }
 
   @include mobile {
+    padding-bottom: 50px;
     grid-template-columns: auto;
     justify-items: center;
   }
@@ -102,7 +110,7 @@
 
   @include tablet {
     width: 100%;
-    margin-bottom: 34px;
+    margin-bottom: 38px;
 
     padding-top: 38px;
     position: relative;
@@ -120,6 +128,8 @@
   }
 
   @include mobile {
+    padding-top: 0;
+    margin-bottom: 0;
     grid-column: auto;
   }
 }
@@ -148,13 +158,32 @@
   }
 
   @include mobile {
+    padding: 28px 0 26px 0;
     grid-template-columns: auto;
     justify-items: center;
     row-gap: 21px;
   }
 }
 
-.page-footer__bottom p, .page-footer__duration {
+.page-footer__accordeon-item {
+  @include mobile {
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 1px;
+      background-color: $border-color-grey;
+      position: absolute;
+      left: Max(calc(-1 * (100vw - 100%) / 2), -254px);
+      width: Min(100vw, $max-desktop-width);
+      opacity: 0.2;
+      top: 0;
+    }
+  }
+}
+
+.page-footer__bottom p,
+.page-footer__duration {
   @include font($font-mono, 400);
 
   margin: 0;
@@ -162,7 +191,6 @@
   font-size: 13px;
   line-height: 24px;
   color: $text-color-dark;
-  opacity: 0.5;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   width: max-content;
@@ -173,6 +201,7 @@
 .page-footer__developer a {
   color: inherit;
   text-decoration: none;
+  opacity: 0.5;
 }
 
 .page-footer__developer {
@@ -200,4 +229,26 @@
   @include tablet {
     display: none;
   }
+}
+
+.page-footer__numbers-list a:hover,
+.page-footer__numbers-list a:focus,
+.page-footer__confidentiality a:hover,
+.page-footer__developer a:hover,
+.page-footer__confidentiality a:focus,
+.page-footer__developer a:focus {
+  opacity: 0.9;
+}
+
+.page-footer__numbers-list a:active,
+.page-footer__confidentiality a:active,
+.page-footer__developer a:active {
+  color: $focus-color-dark;
+  opacity: 1;
+}
+
+.page-footer__numbers-list a:focus,
+.page-footer__confidentiality a:focus,
+.page-footer__developer a:focus {
+  outline: 2px solid $focus-color-dark;
 }

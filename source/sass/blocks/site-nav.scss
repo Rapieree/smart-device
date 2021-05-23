@@ -1,15 +1,10 @@
-.site-nav {
-}
-
 .site-nav__list {
-  //width: fit-content;
   height: inherit;
   margin: 0;
   padding: 0;
   list-style-type: none;
   column-count: 2;
   column-gap: 20px;
-  //column-gap: 15%;
 
   @include tablet {
     column-count: auto;
@@ -26,4 +21,18 @@
   color: $text-color-dark;
   opacity: 0.5;
   text-decoration: none;
+}
+
+.site-nav__list a:hover,
+.site-nav__list a:focus {
+  opacity: 0.9;
+}
+
+.site-nav__list a:active {
+  color: $focus-color-dark;
+  opacity: 1;
+}
+
+.site-nav__list a:focus {
+  outline: 2px solid $focus-color-dark;
 }

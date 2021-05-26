@@ -16,8 +16,9 @@
 }
 
 .contacts a {
-  margin: 10px 44px;
   @include font($font-mono, 400);
+
+  margin: 10px 44px;
   display: grid;
   grid-template-columns: max-content 1fr;
   align-items: center;

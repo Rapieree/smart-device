@@ -16,6 +16,7 @@
 
 <body class="page-body">
   <header class="page-header">
+    <h1 class="visually-hidden">Smart Device - производство, поставка печатных плат</h1>
     <div class="page-header__wrapper">
       <a class="logo">
         <img src="img/logo.svg" width="52" height="52" alt="Логотип">
@@ -23,6 +24,7 @@
         <p class="logo__tagline">умные технологии</p>
       </a>
       <section class="page-header__contacts contacts">
+        <h2 class="visually-hidden">Наши контакты</h2>
         <a class="contacts__email" href="mailto:info@sd.ru">
           <svg width="19" height="14">
             <title>Наша почта: info@sd.ru</title>
@@ -40,22 +42,25 @@
       </section>
       <a class="page-header__call-button page-body__border-button" href="#">Заказать звонок</a>
       <section class="promo">
-        <h1>Печатные платы</h1>
+        <h2>Печатные платы</h2>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="promo__write-us-link" href="#">
-          <span class="promo__write-us-link--desktop">Получить бесплатную консультацию</span>
-          <span class="promo__write-us-link--mobile">Бесплатная консультация</span>
+        <a class="promo__write-us-link" href="#write-us-marker">
+          <span class="promo__write-us-link-text-desktop">Получить бесплатную консультацию</span>
+          <span class="promo__write-us-link-text-mobile">Бесплатная консультация</span>
         </a>
         <div class="promo__img-wrapper">
-          <img src="img/promo/promo-chipset-desktop.png" srcset="img/promo/promo-chipset-desktop@2x.png 2x" width="705" height="515">
+          <picture>
+            <source type="image/webp" srcset="img/promo/promo-chipset-desktop.webp 1x, img/promo/promo-chipset-desktop@2x.webp 2x">
+            <!-- 1x: 705/515px; 2x: 1410/1030px -->
+            <img src="img/promo/promo-chipset-desktop.png" srcset="img/promo/promo-chipset-desktop@2x.png 2x" width="705" height="515" alt="Фото печатной платы">
+          </picture>
         </div>
-        <a class="promo__down-link" href="#">Скролл вниз</a>
+        <a class="promo__down-link" href="#features-marker">Скролл вниз</a>
       </section>
     </div>
   </header>
-
   <main>
-    <section class="features">
+    <section class="features" id="features-marker">
       <div class="features__background"></div>
       <h2 class="visually-hidden">Наши преимущества</h2>
       <ul class="features__list">
@@ -120,6 +125,9 @@
                 <source type="image/webp" media="(min-width: 1024px)" srcset="img/categories/categories-production-desktop.webp 1x, img/categories/categories-production-desktop@2x.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/categories/categories-production-mobile.jpg 1x, img/categories/categories-production-mobile@2x.jpg 2x">
                 <source media="(max-width: 1024px)" srcset="img/categories/categories-production-tablet.jpg 1x, img/categories/categories-production-tablet@2x.jpg 2x">
+                <!-- Mobile - 1x: 290/256px; 2x: 580/512px -->
+                <!-- Tablet - 1x: 715/256px; 2x: 1430/512px -->
+                <!-- Desktop - 1x: 370/620px; 2x: 740/1240px -->
                 <img src="img/categories/categories-production-desktop.jpg" srcset="img/categories/categories-production-desktop@2x.jpg 2x" width="370" height="620" alt="Фото с производства печатных плат">
               </picture>
             </a>
@@ -133,6 +141,9 @@
                 <source type="image/webp" media="(min-width: 1024px)" srcset="img/categories/categories-assembling-desktop.webp 1x, img/categories/categories-assembling-desktop@2x.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/categories/categories-assembling-mobile.jpg 1x, img/categories/categories-assembling-mobile@2x.jpg 2x">
                 <source media="(max-width: 1024px)" srcset="img/categories/categories-assembling-tablet.jpg 1x, img/categories/categories-assembling-tablet@2x.jpg 2x">
+                <!-- Mobile - 1x: 290/256px; 2x: 580/512px -->
+                <!-- Tablet - 1x: 715/256px; 2x: 1430/512px -->
+                <!-- Desktop - 1x: 370/620px; 2x: 740/1240px -->
                 <img src="img/categories/categories-assembling-desktop.jpg" srcset="img/categories/categories-assembling-desktop@2x.jpg 2x" width="370" height="620" alt="Фото распаивания печатной платы">
               </picture>
             </a>
@@ -146,6 +157,9 @@
                 <source type="image/webp" media="(min-width: 1024px)" srcset="img/categories/categories-lighting-desktop.webp 1x, img/categories/categories-lighting-desktop@2x.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/categories/categories-lighting-mobile.jpg 1x, img/categories/categories-lighting-mobile@2x.jpg 2x">
                 <source media="(max-width: 1024px)" srcset="img/categories/categories-lighting-tablet.jpg 1x, img/categories/categories-lighting-tablet@2x.jpg 2x">
+                <!-- Mobile - 1x: 290/256px; 2x: 580/512px -->
+                <!-- Tablet - 1x: 715/256px; 2x: 1430/512px -->
+                <!-- Desktop - 1x: 370/620px; 2x: 740/1240px -->
                 <img src="img/categories/categories-lighting-desktop.jpg" srcset="img/categories/categories-lighting-desktop@2x.jpg 2x" width="370" height="620" alt="Фото светодиодов">
               </picture>
             </a>
@@ -153,18 +167,18 @@
         </ul>
       </div>
     </section>
-    <section class="write-us">
+    <section class="write-us" id="write-us-marker">
       <div class="write-us__wrapper">
         <h2>Остались вопросы? Задайте их нам!</h2>
         <p>Мы проконсультируем Вас бесплатно</p>
-        <form class="write-us__form feedback-form" autocomplete="off">
+        <form class="write-us__form feedback-form" autocomplete="off" action="https://echo.htmlacademy.ru" method="GET">
           <div class="write-us__name-wrapper">
             <label class="visually-hidden" for="write-us-name">Введите имя</label>
-            <input id="write-us-name" type="text" placeholder="Имя" name="name" required="">
+            <input id="write-us-name" type="text" placeholder="Имя" name="name" minlength="2" maxlength="100" required="">
           </div>
           <div class="write-us__phone-wrapper">
             <label class="visually-hidden" for="write-us-phone">Введите номер телефона</label>
-            <input id="write-us-phone" type="tel" placeholder="Телефон" name="phone" required="">
+            <input id="write-us-phone" type="tel" placeholder="Телефон" name="phone" minlength="17" maxlength="17" required="">
           </div>
           <div class="write-us__text-wrapper">
             <label class="visually-hidden" for="write-us-text">Задайте вопрос</label>
@@ -181,7 +195,6 @@
       </div>
     </section>
   </main>
-
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__top">
@@ -219,9 +232,15 @@
         </ul>
       </div>
       <div class="page-footer__middle accordeon">
-        <div class="page-footer__accordeon-item accordeon__item">
+        <!-- accorder__item--selected -->
+        <div class="page-footer__accordeon-item accordeon__item accordeon__item--nojs">
           <div class="accordeon__header">
             <h2 class="accordeon__title">Разделы сайта</h2>
+            <button class="accordeon__button" type="button">
+              <!--  accordeon__button-text--selected -->
+              <span class="accordeon__button-text accordeon__button-text--close visually-hidden">Открыть меню</span>
+              <span class="accordeon__button-text accordeon__button-text--open visually-hidden">Закрыть меню</span>
+            </button>
           </div>
           <div class="accordeon__content">
             <nav class="site-nav">
@@ -237,11 +256,18 @@
             </nav>
           </div>
         </div>
-        <div class="page-footer__accordeon-item accordeon__item accordeon__item--selected">
+        <!-- accorder__item--selected -->
+        <div class="page-footer__accordeon-item accordeon__item accordeon__item--nojs">
           <div class="accordeon__header">
             <h2 class="accordeon__title">Наш офис</h2>
+            <button class="accordeon__button" type="button">
+              <!--  accordeon__button-text--selected -->
+              <span class="accordeon__button-text accordeon__button-text--close visually-hidden">Открыть меню</span>
+              <span class="accordeon__button-text accordeon__button-text--open visually-hidden">Закрыть меню</span>
+            </button>
           </div>
           <div class="accordeon__content">
+            <p class="visually-hidden">Наши контакты</p>
             <p class="page-footer__address">г. Мытищи, Олимпийский проспект, д.10</p>
             <ul class="page-footer__numbers-list">
               <li><a href="tel:74955894050">+7 (495) 589-40-50</a></li>
@@ -266,14 +292,14 @@
       <button class="popup__button-close" type="button" aria-label="Закрыть окно"></button>
       <p class="popup__title">Закажите звонок</p>
       <p class="popup__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <form class="popup__form feedback-form" autocomplete="off">
+      <form class="popup__form feedback-form" autocomplete="off" action="https://echo.htmlacademy.ru" method="GET">
         <div class="popup__name-wrapper">
           <label class="visually-hidden" for="popup-name">Введите имя</label>
           <input id="popup-name" type="text" placeholder="Имя" name="name" required="">
         </div>
         <div class="popup__phone-wrapper">
           <label class="visually-hidden" for="popup-phone">Введите номер телефона</label>
-          <input id="popup-phone" type="tel" placeholder="Телефон" name="phone" required="">
+          <input id="popup-phone" type="tel" placeholder="Телефон" name="phone" minlength="17" maxlength="17" required="">
         </div>
         <div class="popup__text-wrapper">
           <label class="visually-hidden" for="popup-text">Задайте вопрос</label>
@@ -289,6 +315,9 @@
       </form>
     </div>
   </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

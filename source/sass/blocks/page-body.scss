@@ -10,8 +10,10 @@
 }
 
 .page-body--scroll-hidden {
+  overflow: hidden;
+
   @include tablet {
-    overflow: hidden;
+    overflow: auto;
   }
 }
 
@@ -30,7 +32,7 @@
 
   font-size: 14px;
   line-height: 16px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid $background-color-main;
   border-radius: 5px;
   letter-spacing: 0.05em;
   text-transform: uppercase;

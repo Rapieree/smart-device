@@ -25,8 +25,28 @@
   }
 }
 
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .popup--open {
   display: flex;
+  animation: bounce 0.6s;
 
   @include tablet {
     display: none;
@@ -38,7 +58,7 @@
   width: 490px;
   height: 605px;
   background-color: $accent-color;
-  z-index: 99;
+  z-index: 98;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -49,6 +69,7 @@
 }
 
 .popup__button-close {
+  cursor: pointer;
   margin: 0;
   padding: 0;
   border: none;
@@ -58,8 +79,10 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 100;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
     width: 23px;
     height: 1px;
@@ -74,6 +97,26 @@
   &::after {
     transform: rotate(-45deg);
     transform-origin: 19px 8px;
+  }
+}
+
+.popup__button-close:hover,
+.popup__button-close:focus {
+  &::before,
+  &::after {
+    background-color: $focus-color-dark;
+  }
+}
+
+.popup__button-close:focus {
+  outline: 1px solid $background-color-main;
+  outline-offset: 4px;
+}
+
+.popup__button-close:active {
+  &::before,
+  &::after {
+    opacity: 0.5;
   }
 }
 

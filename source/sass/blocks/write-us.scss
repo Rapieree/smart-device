@@ -2,6 +2,7 @@
   background-color: $accent-color;
   padding: 0 30px;
   position: relative;
+  overflow: hidden;
 
   @include tablet {
     padding: 0 88px;
@@ -59,21 +60,21 @@
     max-width: 500px;
   }
 
-    &::before {
-      content: "";
-      padding-top: 95.52%;
-      background-image: url("../img/background-triangles.svg");
-      background-repeat: no-repeat;
-      background-size: 100%;
-      position: absolute;
-      top: -60px;
-      left: -200px;
-      right: 700px;
+  &::before {
+    content: "";
+    padding-top: 95.52%;
+    background-image: url("../img/background-triangles.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: -60px;
+    left: -200px;
+    right: 700px;
 
-      @include tablet {
-        display: none;
-      }
+    @include tablet {
+      display: none;
     }
+  }
 
   &::after {
     content: "";
@@ -83,7 +84,7 @@
     background-size: 100%;
     position: absolute;
     left: -2.13%;
-    right: Max(58.46%, 600px);
+    right: Max(58.46%, 600px); /* stylelint-disable-line */
     top: 161px;
 
     @media (min-resolution: 2dppx) {
@@ -178,6 +179,7 @@
   width: 230px;
 
   @include mobile {
+    width: auto;
     margin-left: 0;
   }
 }

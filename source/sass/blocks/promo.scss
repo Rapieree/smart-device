@@ -10,12 +10,12 @@
   }
 
   @include mobile {
-    margin-left: calc((100vw - #{$min-mobile-width}) / 4);
+    margin-left: calc((100vw - #{$min-mobile-width}) / 4); /* stylelint-disable-line */
     width: 287px;
   }
 }
 
-.promo h1 {
+.promo h2 {
   @include font($font-roboto-c, 700);
 
   margin: 0 0 27px -5px;
@@ -177,7 +177,6 @@
 .promo__down-link {
   @include font($font-mono, 400);
 
-
   margin-top: 93px;
   display: inline-block;
   width: max-content;
@@ -187,6 +186,7 @@
   transform: rotate(-90deg);
   transform-origin: 0 0;
   text-decoration: none;
+  vertical-align: middle;
 
   @include tablet {
     display: none;
@@ -195,11 +195,11 @@
 
 .promo__down-link:hover,
 .promo__down-link:focus {
-  color:rgba($text-color-main, 1);
+  color: rgba($text-color-main, 1);
 }
 
 .promo__down-link:active {
-  color:rgba($text-color-main, 0.5);
+  color: rgba($text-color-main, 0.5);
 }
 
 .promo__down-link:focus {
@@ -207,13 +207,13 @@
   outline-offset: 5px;
 }
 
-.promo__write-us-link--desktop {
+.promo__write-us-link-text-desktop {
   @include mobile {
     display: none;
   }
 }
 
-.promo__write-us-link--mobile {
+.promo__write-us-link-text-mobile {
   display: none;
 
   @include mobile {

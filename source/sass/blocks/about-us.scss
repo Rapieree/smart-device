@@ -99,6 +99,7 @@
   border-color: $accent-color;
   letter-spacing: 0.05em;
   text-align: center;
+  vertical-align: middle;
 
   @include tablet {
     margin-left: 3px;
@@ -140,8 +141,9 @@
 }
 
 .about-us__year > p {
-  writing-mode: vertical-rl;
   @include font($font-roboto-c, 700);
+
+  writing-mode: vertical-rl;
   margin: 0;
   padding: 0;
   font-size: 156.248px;
@@ -154,6 +156,7 @@
   background-position: 35px -5px;
   background-repeat: repeat;
   color: transparent;
+  vertical-align: middle;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/about-us/text-background@2x.jpg");

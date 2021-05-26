@@ -26,6 +26,7 @@ img {
   clip: rect(0 0 0 0);
 }
 
+/* stylelint-disable */
 @mixin font($font, $weight) {
   @if $font == $font-mono {
     font-family: $font, "Courier", monospace;
@@ -37,6 +38,7 @@ img {
   font-style: normal;
   font-weight: $weight;
 }
+/* stylelint-enable */
 
 @mixin tablet {
   @media (max-width: $max-tablet-width) {

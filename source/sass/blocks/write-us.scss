@@ -168,12 +168,15 @@
 }
 
 .write-us__submit-wrapper {
+  order: 1;
+
   @include mobile {
     margin-top: -2px;
   }
 }
 
 .write-us__checked-wrapper {
+  order: 2;
   margin-left: 8px;
   align-self: center;
   width: 230px;
